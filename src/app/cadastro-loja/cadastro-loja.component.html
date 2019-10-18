@@ -1,0 +1,32 @@
+<app-menu></app-menu>
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Cadastro Infinity</title>
+
+
+  </head>
+
+  <body class="text-center">
+
+    <form class="form-signin" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+      <h1 class="h3 mb-3 font-weight-normal">Faça seu cadastro!</h1>
+      <label for="nome" class="sr-only">Nome</label>
+      <input type="text" formControlName="nome" id="nome" class="form-control" placeholder="Seu nome" autofocus>
+      <label for="descricao" class="sr-only">Descricao</label>
+      <input type="text" formControlName="descricao" id="descricao" class="form-control" placeholder="Descrição">
+      <label for="localizacao"  class="sr-only">Localização</label>
+      <input type="email" formControlName="localizacao" id="localizacao" class="form-control" placeholder="Sua Localização">
+      <label for="categoria"  class="sr-only">Categoria</label>
+      <input type="text" formControlName="categoria" id="cpf" class="form-control" placeholder="Categoria" required>
+
+      <button type="submit" class="btn btn-lg btn-primary btn-block">Cadastrar</button>
+       </form>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<app-menu></app-menu>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Descrição</th>
+      <th scope="col" colspan="2" class="text-center">Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let loja of lojas">
+      <td>{{loja.nome}}</td>
+      <td>{{loja.categoria}}</td>
+      <td>{{loja.descricao}}</td>
+      <td class="text-center"><span class="badge badge-info">Editar</span></td>
+      <td class="text-center"><span class="badge badge-danger" (click)="removeLoja(loja.id)">Excluir</span></td>
+    </tr>
+  </tbody>
+</table>

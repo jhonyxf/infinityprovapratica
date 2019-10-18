@@ -1,0 +1,30 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Prova Infinity</title>
+
+
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+      <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Bem vindo a prova Infinity!</h1>
+      <label for="nome" class="sr-only">Nome</label>
+      <input type="text" formControlName="nome" id="nome" class="form-control" placeholder="Digite seu nome" required autofocus>
+      <label for="cpf" class="sr-only">CPF</label>
+      <input type="password" formControlName="cpf" id="cpf" class="form-control" placeholder="Digite seu CPF" required>
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+      <button routerLink="/cadastro" type="button" class="btn btn-lg btn-block btn-outline-primary">Cadastre-se</button>
+       <div class="alert alert-danger" role="alert" *ngIf="!acesso">Acesso inválido</div>
+    </form>
+  </body>
+</html>

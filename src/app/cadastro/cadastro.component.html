@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Cadastro Infinity</title>
+
+
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+      <h1 class="h3 mb-3 font-weight-normal">Faça seu cadastro!</h1>
+      <label for="nome" class="sr-only">Nome</label>
+      <input type="text" formControlName="nome" id="nome" class="form-control" placeholder="Seu nome" autofocus>
+      <label for="telefone" class="sr-only">Telefone</label>
+      <input type="text" formControlName="telefone" id="telefone" class="form-control" placeholder="Seu telefone">
+      <label for="email"  class="sr-only">Endereço de email</label>
+      <input type="email" formControlName="email" id="email" class="form-control" placeholder="Seu email">
+      <label for="cpf"  class="sr-only">CPF</label>
+      <input type="text" formControlName="cpf" id="cpf" class="form-control" placeholder="Seu cpf" required>
+
+      <button type="submit" class="btn btn-lg btn-primary btn-block">Cadastrar</button>
+      <div class="alert alert-warning" role="alert" *ngIf="nome.dirty && nome.hasError('minlength')">O campo nome deve ter mais de 3 caracteres</div>
+      <div class="alert alert-warning" role="alert" *ngIf="email.dirty && email.hasError('email')">Email inválido</div>
+   </form>
+  </body>
+</html>
